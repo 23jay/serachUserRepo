@@ -1,0 +1,18 @@
+<div class="cards-container" *ngIf='repoList'>
+    <div class="card col-md-6" style="width: 45rem;" *ngFor="let item of repoList">
+
+        <div class="card-body">
+            <p class="card-text">Full Name : {{item.full_name}}</p>
+            <p class="card-text">Repository Name : {{item.name}}</p>
+            <p class="card-text">Language : {{item.language}}</p>
+            <p class="card-text">Last Update : {{item.updated_at | date: 'd/M/y' }}</p>
+            
+
+
+        </div>
+    </div>
+</div>
+
+<div class="cards-container" *ngIf='!repoList'>
+    <p>Data not found</p>
+</div>

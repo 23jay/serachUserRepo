@@ -1,0 +1,3 @@
+<app-user  (userNameEntered)="userValueEntered($event);" ></app-user>
+<app-serach-box (buttonClicked)="buttonTriggered($event);"  *ngIf="searchDisable"></app-serach-box>
+<app-user-repo-list [repoList]="repoList" ></app-user-repo-list>

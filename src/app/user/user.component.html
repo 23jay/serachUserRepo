@@ -1,0 +1,12 @@
+<form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+    <button mat-raised-button color="primary" type="submit" style="float: right">Search User Repo</button>
+    <div style="overflow: hidden; padding-right: .5em; margin-top: 20px;">
+        <input style="margin: auto; width: 100%;" placeholder="Please Enter user name Here..."
+            formControlName="username">
+        <div class="custom_validation" *ngIf="f.username.errors && (f.username.dirty || f.username.touched)">
+            <div *ngIf="f.username.errors?.required">Username is required</div>
+        </div>
+
+
+    </div>
+</form>
