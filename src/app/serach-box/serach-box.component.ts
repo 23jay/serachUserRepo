@@ -7,15 +7,15 @@ import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 })
 export class SerachBoxComponent implements OnInit {
 
-  @Output() buttonClicked = new EventEmitter<string>();
+  @Output() searchValue = new EventEmitter<string>();
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  onButtonClicked(data: any) {
-    this.buttonClicked.emit(data.value);
+  searchByRepo(data: any) {
+    this.searchValue.emit(data.value);
   }
 
 }

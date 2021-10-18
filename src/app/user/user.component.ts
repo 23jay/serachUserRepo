@@ -8,7 +8,7 @@ import { FormBuilder, FormGroup, Validators } from "@angular/forms";
 export class UserComponent implements OnInit {
   userForm: FormGroup;
   @Output() userNameEntered = new EventEmitter<MouseEvent>();
-  
+
   constructor(private formBuilder: FormBuilder) { }
 
   ngOnInit(): void {

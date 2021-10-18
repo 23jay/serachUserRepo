@@ -10,6 +10,7 @@ const API_URL = 'https://api.github.com/users/';
 export class ApiService {
   constructor(private http: HttpClient) { }
 
+  // get all Repo by User
   public getUserRepo(Username: any): Observable<any> {
     return this.http.get(API_URL + Username + '/repos').pipe(map((res) => res));
   }

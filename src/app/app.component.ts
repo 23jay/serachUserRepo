@@ -14,8 +14,8 @@ export class AppComponent {
   constructor(private apiservice: ApiService) {
   }
 
-  // 
-  buttonTriggered(evt: any) {
+  // Search  Repo List
+  searchRepoList(evt: any) {
     this.repoList = this.dummyData.filter(
       (item: any) => item.name.toLowerCase().indexOf(evt.toLowerCase()) > -1);
     if (this.repoList.length == 0) {
@@ -24,6 +24,7 @@ export class AppComponent {
 
   }
 
+  // API calling for Repo List
   userValueEntered(evt: any) {
     this.apiservice.getUserRepo(evt).subscribe((data: any) => {
       this.repoList = data;
